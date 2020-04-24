@@ -1,0 +1,29 @@
+Uploading assets
+No assets changed, skipped.
+Processing asset bundle patterns:
+- /home/cd/projetos/omnistack11/mobile/**/*
+Uploading JavaScript bundles
+Published
+Your URL is
+
+https://exp.host/@clovisdanielcosta/bethehero
+
+› Closing Expo server
+› Stopping Metro bundler
+Checking if this build already exists...
+
+Build started, it may take a few minutes to complete.
+You can check the queue length at https://expo.io/turtle-status
+
+You can make this faster. 🐢
+Get priority builds at: https://expo.io/settings/billing
+
+You can monitor the build at
+
+ https://expo.io/dashboard/clovisdanielcosta/builds/fc8f5e1b-9aeb-468d-9d8c-cba7892ab444
+
+Waiting for build to complete.
+You can press Ctrl+C to exit. It won't cancel the build, you'll able to monitor it at the printed URL.
+✔ Build finished.
+Successfully built standalone app: https://expo.io/artifacts/6e81359b-0e69-46d1-84eb-7237533f655e
+cd@cd-pc:~/projetos/omnistack11/mobile$ 
