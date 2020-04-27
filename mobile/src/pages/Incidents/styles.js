@@ -5,7 +5,8 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         paddingHorizontal: 24,
-        paddingTop: Constants.statusBarHeight + 20
+        paddingTop: Constants.statusBarHeight + 5
+        
     },
 
     header: {
@@ -15,21 +16,32 @@ export default StyleSheet.create({
     },
 
     headerText: {
-        fontSize: 15,
-        color: '#737380'       
+        fontSize: 14,
+        color: '#999999'       
     },
 
     headerTextBold: {
         fontWeight: 'bold'
     },
 
-    title: {
-        fontSize: 30,
-        marginBottom: 16,
-        marginTop: 48,
-        color: '#13131a',
-        fontWeight: 'bold',
+   namePublisher: {
+        fontSize: 25,
+        color: '#666668',
+        fontWeight: 'bold',       
     },
+
+    title: {
+        fontSize: 26,
+        marginBottom: 15,
+        marginTop: 8,
+        color: '#FF9900',
+    },
+    
+	privillege: {
+        fontSize: 24,
+        color: '#FF9900',
+        fontWeight: 'bold'
+    },   
 
     description: {
         fontSize: 16,
@@ -53,7 +65,7 @@ export default StyleSheet.create({
         color: '#41414d',
         fontWeight: 'bold'
     },
-
+    
     incidentValue: {
         marginTop: 8,
         fontSize: 15,
