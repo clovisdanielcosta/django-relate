@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { View, FlatList, Image, Picker, Text, TouchableOpacity } from 'react-native';
-import { Table, Rows, Row } from 'react-native-table-component';
+import { Table, TableWrapper, Col, Cols, Cell } from 'react-native-table-component';
 
 import api from '../../services/api';
 
@@ -47,10 +47,20 @@ export default function Incidents () {
     }, []);
     
     const [ selectedValue, setSelectedValue ] = useState("Publicador");
+   
+    this.state = {
+        tableTitle: [ 'Title1', 'Title2', 'Title3', 'Title4' ],
+        tableData: [ 
+            ['1', 'a', 'b', 'c', 'd' ],
+            ['2', '1', '2', '3', '4' ],
+            ['3', 'a', 'b', 'c', 'd' ]
+        ]
+    }
+
+    const state = this.state;
     
     return(
-        <View style={styles.container}> 
-        	
+        <View style={styles.container}>     	
             <View style={styles.header}>
                 <Text style={styles.title}>Atividades</Text>
                 <Text style={styles.headerText}>24 Abr. 2020</Text>
@@ -61,9 +71,7 @@ export default function Incidents () {
             <Text style={styles.namePublisher}>Novembro</Text>
  
             <Picker 
-            
                 selectedValue={selectedValue}
-
                 style={styles.privillege, { height: 30, width: 200 }}
                 onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
                 <Picker.Item label="Publicador" value="Publicador" />
@@ -71,9 +79,14 @@ export default function Incidents () {
                 <Picker.Item label="PioneiroAuxiliar30" value="Pioneiro Auxiliar 30" />
                 <Picker.Item label="PioneiroRegular" value="Pioneiro Regular" />
                 <Picker.Item label="PioneiroEspecial" value="Pioneiro Especial" />
-
             </Picker>
 
+            <View style={styles.container}>
+                <Table style={{flexDirection: 'row'}} borderStyle={{borderWidth: 1}}>
+                    {/* Left Wrapper */}
+                    <TableWrapper
+
+            </View>
 
                     <View style={styles.incident}>
 
