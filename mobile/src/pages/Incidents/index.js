@@ -1,7 +1,8 @@
- import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { View, FlatList, Image, Text, TouchableOpacity } from 'react-native';
+import { View, FlatList, Image, Picker, Text, TouchableOpacity } from 'react-native';
+import { Table, TableWrapper, Col, Cols, Cell } from 'react-native-table-component';
 
 import api from '../../services/api';
 
@@ -44,55 +45,70 @@ export default function Incidents () {
     useEffect(() => {
         loadIncidents();
     }, []);
+    
+    const [ selectedValue, setSelectedValue ] = useState("Publicador");
+   
+    this.state = {
+        tableTitle: [ 'Title1', 'Title2', 'Title3', 'Title4' ],
+        tableData: [ 
+            ['1', 'a', 'b', 'c', 'd' ],
+            ['2', '1', '2', '3', '4' ],
+            ['3', 'a', 'b', 'c', 'd' ]
+        ]
+    }
 
+    const state = this.state;
+    
     return(
-        <View style={styles.container}> 
+        <View style={styles.container}>     	
             <View style={styles.header}>
-                <Image source={logoImg} />
-                <Text style={styles.headerText}>
-                    Total de <Text style={styles.headerTextBold}>{total} casos</Text>.
-                </Text>
+                <Text style={styles.title}>Atividades</Text>
+                <Text style={styles.headerText}>24 Abr. 2020</Text>
+            </View>
+            
+            <Text style={styles.namePublisher}>Clovis Daniel Costa</Text>
+            <Text style={styles.title, { paddingLeft: 30 }}>2020</Text>
+            <Text style={styles.namePublisher}>Novembro</Text>
+ 
+            <Picker 
+                selectedValue={selectedValue}
+                style={styles.privillege, { height: 30, width: 200 }}
+                onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
+                <Picker.Item label="Publicador" value="Publicador" />
+                <Picker.Item label="PioneiroAuxiliar" value="Pioneiro Auxiliar" />
+                <Picker.Item label="PioneiroAuxiliar30" value="Pioneiro Auxiliar 30" />
+                <Picker.Item label="PioneiroRegular" value="Pioneiro Regular" />
+                <Picker.Item label="PioneiroEspecial" value="Pioneiro Especial" />
+            </Picker>
+
+            <View style={styles.container}>
+                <Table style={{flexDirection: 'row'}} borderStyle={{borderWidth: 1}}>
+                    {/* Left Wrapper */}
+                    <TableWrapper
+
             </View>
 
-            <Text style={styles.title}>Bem Vindo!</Text>
-            <Text style={styles.description}>Escolha um dos casos abaixo e salve o dia.</Text>
-
-            <FlatList
-                data={incidents}
-                style={styles.incidentList}
-                keyExtractor={incident => String(incident.id)}
-                //showsVerticalScrollIndicator={false}
-                onEndReached={loadIncidents}
-                onEndReachedThreshold={0.2}
-                renderItem={({ item: incident }) => (
                     <View style={styles.incident}>
+
                         <Text style={styles.incidentProperty}>ONG:</Text>
-                        <Text style={styles.incidentValue}>{incident.name}</Text>
+                        <Text style={styles.incidentValue}>Nome1</Text>
                         
                         <Text style={styles.incidentProperty}>CASO:</Text>
-                        <Text style={styles.incidentValue}>{incident.title}</Text>
+                        <Text style={styles.incidentValue}>Nome2</Text>
 
                         <Text style={styles.incidentProperty}>DESCRIÇÃO:</Text>
-                        <Text style={styles.incidentValue}>{incident.description}</Text>                       
+                        <Text style={styles.incidentValue}>Nome3</Text>                       
                         
                         <Text style={styles.incidentProperty}>VALOR:</Text>
-                        <Text style={styles.incidentValue}>
-                            {Intl.NumberFormat('pt-BR', { 
-                            style: 'currency', 
-                            currency: 'BRL'
-                            }).format(incident.value)}
-                        </Text>
+                        <Text style={styles.incidentValue}>Nome3</Text>
 
                         <TouchableOpacity 
                             style={styles.detailsButton}
-                            onPress={() => navigateToDetail(incident)}
                         >
                             <Text style={styles.detailsButtonText}>Ver mais detalhes</Text>    
                             <Feather name="arrow-right" size={16} color="#E02041" />
                         </TouchableOpacity>
-                </View>
-                )}
-            />
+                    </View>
 
         </View>
     );
