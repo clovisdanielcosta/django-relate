@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+body {
+    background-color: #F8F9F9;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, auto);
+    margin: 0;
+    padding: 0;
+    grid-template-areas:
+        "nav nav nav nav nav nav"	
+        "header-name header-name header-name header-name header-year header-year"
+        "header-priv header-priv header-priv header-priv header-month header-month"
+        "tot-tit-hour tot-tit-pub tot-tit-vid tot-tit-vis tot-tit-stu tot-tit-stu"    
+        "tot-hour tot-pub tot-vid tot-vis tot-stu tot-stu"    
+        "activ activ activ-rem activ-rem activ-rem activ-rem"	
+        "it-text it-text it-text it-text it-text it-day"	
+        "itens itens itens itens itens itens"    
+    }
+
+.grid > *{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-color: #F8F9F9;
+    color: #666666;
+    text-align: center;
+}
+
+.nav{
+    grid-area: nav;
+    height: 40px;
+}
+
+.header-activ{
+    grid-area: header-activ;
+    float: left;
+    font-weight: bold;
+    color: #FF9900;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.header-date{
+    grid-area: header-date;
+    float: right;
+    font-size: 14px;
+    font-weight: 400;
+    color: #C0C0C0;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.header-name{
+    grid-area: header-name;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 5px;
+    color: #666666;
+    
+}
+
+.header-year{
+    grid-area: header-year;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 18px;
+    padding-right: 5px;
+    font-weight: bold;
+    color: #666666;
+}
+
+.header-priv{
+    grid-area: header-priv;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FF9900;   
+}
+
+.header-month{
+    grid-area: header-month;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 12px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #FF9900;
+}
+
+.tot-tit-hour{
+    grid-area: tot-tit-hour;
+    font-size: 11px;
+    color: #999999;
+    font-weight: 700;
+    background-color: #FEF9E7;
+    border-top: 2px solid #F4F4F4;
+    border-left: 2px solid #F4F4F4;
+}
+
+.tot-hour{
+    grid-area: tot-hour;
+    width: 65px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF9900;
+    background-color: #FEF9E7;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-left: 2px solid #F4F4F4;
+    border-bottom: 2px solid #F4F4F4;
+}
+
+.tot-tit-pub{
+    grid-area: tot-tit-pub;
+    font-size: 11px;
+    width: 75px;
+    color: #999999;
+    font-weight: 700;
+    background-color: #FEF9E7;
+    border-top: 2px solid #F4F4F4;
+}
+
+.tot-pub{
+    grid-area: tot-pub;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF9900;
+    background-color: #FEF9E7;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #F4F4F4;
+}
+
+.tot-tit-vid{
+    grid-area: tot-tit-vid;
+    width: 65px;
+    font-size: 11px;
+    color: #999999;
+    font-weight: 700;
+    background-color: #FEF9E7;
+    border-top: 2px solid #F4F4F4;
+}
+
+.tot-vid{
+    grid-area: tot-vid;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF9900;
+    background-color: #FEF9E7;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #F4F4F4;
+}
+
+.tot-tit-vis{
+    grid-area: tot-tit-vis;
+    width: 65px;
+    font-size: 11px;
+    color: #999999;
+    font-weight: 700;
+    background-color: #FEF9E7;
+    border-top: 2px solid #F4F4F4;
+}
+
+.tot-vis{
+    grid-area: tot-vis;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF9900;
+    background-color: #FEF9E7;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #F4F4F4;
+}
+
+.tot-tit-stu{
+    grid-area: tot-tit-stu;
+    font-size: 11px;
+    color: #999999;
+    font-weight: 700;
+    /* padding-right: 40px; */
+    background-color: #FEF9E7;
+    border-top: 2px solid #F4F4F4;
+    border-right: 2px solid #F4F4F4;
+}
+
+.tot-stu{
+    grid-area: tot-stu;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF9900;
+    background-color: #FEF9E7;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-right: 2px solid #F4F4F4;
+    border-bottom: 2px solid #F4F4F4;
+}
+
+.activ{
+    grid-area: activ;
+    text-align: left;
+    font-size: 11px;
+    color: #999999;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.activ-rem{
+    grid-area: activ-rem;
+    text-align: right;
+    font-size: 10px;
+    padding-right: 5px;
+    padding-top: 10px;
+    color: green;
+}
+
+.itens{
+    margin-top: 3px;
+    grid-area: itens;
+    display: block;
+    background-color: white;
+}
+
+.itens-first{
+    float: left;
+    width: 295px;
+    height: auto;
+}
+
+.itens-second{
+    float: right;
+    width: auto;
+    height: auto;
+    padding-right: 10px;
+}
+
+.itens-data{
+    display: flex;
+    justify-content: start;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.it-text{
+    grid-area: it-text;
+    text-align: left;
+    height: 27px;
+    font-size: 11px;
+    color: #666666;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px; 
+    border-bottom-width: 1px; 
+    border-bottom-style: solid;
+    border-bottom-color: #FFCC99;
+}
+
+.it-hour{
+    grid-area: it-hour;
+    width: 65px;
+    color: #666666;
+}
+
+.it-pub{
+    grid-area: it-pub;
+    width: 75px;
+    color: #666666;
+}
+
+.it-vid{
+    grid-area: it-vid;
+    width: 65px;
+    color: #666666;
+}
+
+.it-vis{
+    grid-area: it-vis;
+    width: 65px;
+    color: #666666;
+}
+
+.it-stu{
+    grid-area: it-stu;
+    width: 25px;
+    text-align: right;
+    color: #666666;
+}
+
+.it-day{
+    grid-area: it-day;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666666; 
+}
+
+.it-day-week{
+    grid-area: it-day-week;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FF9900;
+}
