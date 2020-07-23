@@ -104,6 +104,7 @@ body {
     font-size: 11px;
     color: #999999;
     font-weight: 700;
+    padding-top: 2px;
     background-color: #FEF9E7;
     border-top: 2px solid #F4F4F4;
     border-left: 2px solid #F4F4F4;
@@ -116,8 +117,7 @@ body {
     font-weight: bold;
     color: #FF9900;
     background-color: #FEF9E7;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
     border-left: 2px solid #F4F4F4;
     border-bottom: 2px solid #F4F4F4;
 }
@@ -128,6 +128,7 @@ body {
     width: 75px;
     color: #999999;
     font-weight: 700;
+    padding-top: 2px;
     background-color: #FEF9E7;
     border-top: 2px solid #F4F4F4;
 }
@@ -138,8 +139,7 @@ body {
     font-weight: bold;
     color: #FF9900;
     background-color: #FEF9E7;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
     border-bottom: 2px solid #F4F4F4;
 }
 
@@ -149,6 +149,7 @@ body {
     font-size: 11px;
     color: #999999;
     font-weight: 700;
+    padding-top: 2px;
     background-color: #FEF9E7;
     border-top: 2px solid #F4F4F4;
 }
@@ -159,8 +160,7 @@ body {
     font-weight: bold;
     color: #FF9900;
     background-color: #FEF9E7;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
     border-bottom: 2px solid #F4F4F4;
 }
 
@@ -170,6 +170,7 @@ body {
     font-size: 11px;
     color: #999999;
     font-weight: 700;
+    padding-top: 2px;
     background-color: #FEF9E7;
     border-top: 2px solid #F4F4F4;
 }
@@ -180,8 +181,7 @@ body {
     font-weight: bold;
     color: #FF9900;
     background-color: #FEF9E7;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
     border-bottom: 2px solid #F4F4F4;
 }
 
@@ -190,7 +190,7 @@ body {
     font-size: 11px;
     color: #999999;
     font-weight: 700;
-    /* padding-right: 40px; */
+    padding-top: 2px;
     background-color: #FEF9E7;
     border-top: 2px solid #F4F4F4;
     border-right: 2px solid #F4F4F4;
@@ -203,8 +203,7 @@ body {
     color: #FF9900;
     background-color: #FEF9E7;
     padding-right: 20px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
     border-right: 2px solid #F4F4F4;
     border-bottom: 2px solid #F4F4F4;
 }
@@ -212,11 +211,11 @@ body {
 .activ{
     grid-area: activ;
     text-align: left;
-    font-size: 11px;
+    font-size: 12px;
     color: #999999;
     font-weight: bold;
     padding-left: 5px;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .activ-rem{
@@ -224,37 +223,41 @@ body {
     text-align: right;
     font-size: 10px;
     padding-right: 5px;
-    padding-top: 10px;
+    padding-top: 15px;
     color: green;
 }
 
 .itens{
-    margin-top: 3px;
+    margin-top: 1px;
     grid-area: itens;
     display: block;
-    background-color: white;
+    border: solid 2px #F4F4F4;
 }
 
 .itens-first{
     float: left;
     width: 295px;
     height: auto;
+    background-color: white;
+    margin-bottom: 10px;
 }
 
 .itens-second{
     float: right;
-    width: auto;
+    width: 44px;
     height: auto;
-    padding-right: 10px;
+    padding-right: 1px;
+    background-color: white;
+    margin-bottom: 10px;
 }
 
 .itens-data{
     display: flex;
     justify-content: start;
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .it-text{
@@ -319,7 +322,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 20px;
+    height: 16px;
     font-size: 11px;
     font-weight: bold;
     color: #FF9900;
